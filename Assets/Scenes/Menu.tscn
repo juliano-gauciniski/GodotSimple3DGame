@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccvn7qngslu66"]
+
+[ext_resource type="FontFile" uid="uid://8co3orml0btk" path="res://Assets/Fonts/Big Bottom Cartoon.ttf" id="1_dq6uo"]
+[ext_resource type="FontFile" uid="uid://br4dmsuthj0v6" path="res://Assets/Fonts/Some Time Later.otf" id="2_p21r8"]
+[ext_resource type="Script" path="res://Assets/Scripts/MenuPlayButton.gd" id="3_a17bj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1dd8"]
+font = ExtResource("1_dq6uo")
+font_size = 67
+font_color = Color(0.4, 0.698039, 1, 1)
+shadow_size = 18
+shadow_color = Color(0.603922, 0.0823529, 0.658824, 0.87451)
+shadow_offset = Vector2(5, 5)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.105882, 0.341176, 0.556863, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 1280.0
+offset_bottom = 375.0
+text = "3D GODOT BALL "
+label_settings = SubResource("LabelSettings_q1dd8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuPlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 377.0
+offset_right = 826.0
+offset_bottom = 494.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.470588, 0.117647, 0.6, 1)
+theme_override_colors/font_hover_color = Color(0.356863, 0.662745, 1, 1)
+theme_override_fonts/font = ExtResource("2_p21r8")
+theme_override_font_sizes/font_size = 77
+text = "PLAY"
+flat = true
+icon_alignment = 1
+script = ExtResource("3_a17bj")
+
+[connection signal="pressed" from="MenuPlayButton" to="MenuPlayButton" method="_on_pressed"]

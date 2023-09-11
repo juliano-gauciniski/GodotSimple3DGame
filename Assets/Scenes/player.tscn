@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm04bi36tmjur"]
+
+[ext_resource type="ArrayMesh" uid="uid://qdrwlrjlerkw" path="res://Assets/Textures/playerball_temp.tres" id="1_qyfla"]
+[ext_resource type="ArrayMesh" uid="uid://df588mnaqq14b" path="res://Assets/Textures/playerballCover.tres" id="2_hxncn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsaah"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_jsaah")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.133619, 4.66046e-17, 0.481815, 3.42444e-16, 0.5, 4.66046e-17, -0.481815, 3.42444e-16, -0.133619, 0, 0, 0)
+rotation_order = 0
+sorting_use_aabb_center = false
+custom_aabb = AABB(2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_qyfla")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0)
+mesh = ExtResource("2_hxncn")
